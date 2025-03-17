@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "M PLUS Rounded 1c", serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+    background-color: #FEFBF2;
+}
+
+.service .wrap  {
+    background-color: #FEFBF2;
+}
+
+.scroll-banner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 100s linear infinite;
+}
+
+.scroll-content img {
+    width: auto;
+    display: inline-block;
+    height: 270px;
+}
+
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+}
+
+/* ヒーローセクション（タイトル周辺） */
+.hero {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+h1 img  {
+    width: 250px;
+}
+
+.subtitle {
+    font-size: 20px;
+    font-weight: 800;
+    word-wrap: break-word;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.hero-animals {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero-animals img {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* 「lookmeってなに？」セクション */
+.intro-section {
+    text-align: center;
+    position: relative;
+    margin-bottom: 90px;
+}
+
+/* 丸いデザインの背景を再現（サークル） */
+.intro-circle h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 機能セクション */
+.feature-item   {
+    position: relative;
+    height: 492px;
+    text-align: center;
+}
+
+.feature-item:nth-child(odd) {
+    background-image: url(../img/bk_circle.png);
+    background-repeat: no-repeat;
+    background-size: 310px auto;
+    text-align: center;
+}
+
+.feature-item:nth-child(even) {
+    background-image: url(../img/bk_circle_02.png);
+    background-repeat: no-repeat;
+    background-size: 310px auto;
+    background-position: right center;
+}
+
+.feature-item:nth-child(odd) .box  {
+    text-align: left;
+    padding: 80px 30px 60px;
+    width: 70%;
+    position: absolute;
+    left: 0;
+}
+
+.feature-item:nth-child(even) .box  {
+    text-align: right;
+    padding: 80px 30px 60px;
+    width: 70%;
+    position: absolute;
+    right: 0;
+}
+
+.feature-item h3 {
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.feature-item img.img {
+    width: 120px;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.feature-item p {
+    text-align: center;
+}
+
+.feature-item img.icon {
+    width: 160px;
+}
+
+.feature-item:nth-child(odd) img.icon {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+}
+
+.feature-item:nth-child(even) img.icon {
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+}
+
+/* フッターセクション */
+.footer-section {
+    position: relative;
+    padding: 200px 20px 140px;
+}
+
+.footer-section img {
+    width: 180px;
+}
+
+.footer-section img.cat_icon    {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 180px;
+}
+
+.footer-section img.dog_icon    {
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    width: 180px;
+}
+
+.footer-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.footer-section li {
+    color: #444;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+/* リストの先頭に装飾を付ける例 */
+.footer-section li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+}
+
+.link a   {
+    color: #006C7B;
+}
+
+.link a:first-child {
+    padding-right: 5px;
+}
+
+.link a:last-child {
+    padding-left: 5px;
+}
+
+.service .link  {
+    text-align: center;
+    padding: 30px 0 100px;
+    background-color: #006C7B;
+}
+
+.service .link a  {
+    color: #fff;
+}
+
+.btn_sp {
+    position: fixed;
+    bottom: 0;
+}
+
+.btn_sp {
+    width: 100%;
+    text-align: center;
+    background-color: #006C7B;
+    padding: 5px 0;
+}
+
+.btn_sp a   {
+    text-decoration: none;
+    background-color: #fff;
+    display: block;
+    width: calc(100% - 32px);
+    margin: 10px auto;
+    color: #006C7B;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .pc {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    body    {
+        width: 980px;
+        margin: 0 auto;
+        position: relative;
+        background-color: #F5FAFF;
+    }
+
+    .pc    {
+        position: fixed;
+        text-align: center;
+        top: 30%;
+        width: calc(980px - 500px);
+    }
+
+    .service    {
+        margin-bottom: 80px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+    }
+
+    .service .wrap  {
+        overflow-y: auto;
+        width: 500px;
+        border: #006C7B solid 10px;
+        border-radius: 100px;
+        margin-bottom: 70px;
+    }
+
+    .pc img {
+        width: 260px;
+    }
+
+    .point  {
+        font-size: 18px;
+    }
+
+    .btn    {
+        margin-top: 30px;
+    }
+
+    .btn a {
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+        background-color: #006C7B;
+        width: 260px;
+        margin: 10px auto 60px;
+        color: #fff;
+        border-radius: 7px;
+    }
+
+    .link a   {
+        color: #006C7B;
+    }
+
+    .link a:first-child {
+        padding-right: 5px;
+    }
+
+    .link a:last-child {
+        padding-left: 5px;
+    }
+
+    .service .link  {
+        display: none;
+    }
+
+    .btn_sp {
+        display: none;
+    }
+}
